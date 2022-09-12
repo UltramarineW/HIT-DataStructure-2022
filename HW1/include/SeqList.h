@@ -32,6 +32,7 @@ bool SeqReverse(SeqList &L);
 
 bool SeqRotateRight(SeqList &L, int k);
 
+
 SeqList SeqMerge(SeqList &L1, SeqList &L2);
 
 #endif //DATA_STRUCTURE_SEQLIST_H

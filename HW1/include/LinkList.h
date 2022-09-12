@@ -27,9 +27,11 @@ bool LinkListReverse(LinkList &L);
 
 bool LinkListRotateRight(LinkList &L, int k);
 
+bool LinkListRotateLeft(LinkList &L, int k);
+
 int LinkListLength(LinkList &L);
 
-bool LinkListMerge(LinkList &L1, LinkList &L2);
+LinkList LinkListMerge(LinkList &L1, LinkList &L2);
 
 void LinkListPrint(LinkList &L);
 #endif //DATA_STRUCTURE_LINKLIST_H

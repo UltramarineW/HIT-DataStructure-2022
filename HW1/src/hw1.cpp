@@ -36,17 +36,27 @@ int main(int argc, char* argv[]){
     cout << "Link List Test" << endl;
 
     LinkList TestLinklist;
+    LinkList TestLinklist2;
     LinkListInit(TestLinklist);
+    LinkListInit(TestLinklist2);
     for (int i = 0; i < 10; i++) {
         LinkListInsertTail(TestLinklist, i + 1);
+        LinkListInsertTail(TestLinklist2, i + 3);
     }
-    LinkListInsertTail(TestLinklist, 10);
-    LinkListDeleteRepeat(TestLinklist);
-    LinkListDeleteElem(TestLinklist, 5);
-    LinkListReverse(TestLinklist);
+//    LinkListInsertTail(TestLinklist, 10);
+//    LinkListDeleteRepeat(TestLinklist);
+//    LinkListDeleteElem(TestLinklist, 5);
+//    LinkListReverse(TestLinklist);
 
+//    LinkListRotateRight(TestLinklist, 25);
+//    LinkListRotateLeft(TestLinklist, 2);
+    LinkList L3 = LinkListMerge(TestLinklist, TestLinklist2);
     LinkListPrint(TestLinklist);
+    LinkListPrint(TestLinklist2);
+
+    LinkListPrint(L3);
     cout << "The length of link list: " << LinkListLength(TestLinklist) << endl;
+
 
     return 0;
 }
