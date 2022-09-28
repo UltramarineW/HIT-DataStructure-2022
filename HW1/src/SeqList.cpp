@@ -33,6 +33,10 @@ bool SeqInsertElem(SeqList &L, ElemType elem, int i){
     return true;
 }
 
+/**
+ * Print element int seqlist
+ * @param L
+ */
 void SeqPrintElem(SeqList &L) {
     for (int i = 0; i < L.length; i++) {
         cout <<  L.data[i] << " ";
@@ -126,6 +130,12 @@ bool SeqRotateRight(SeqList &L, int k){
     return true;
 }
 
+/**
+ * Merge two sorted seqlist
+ * @param L1  seqlist 1
+ * @param L2  seqlist 2
+ * @return merged seqlist
+ */
 SeqList SeqMerge(SeqList &L1, SeqList &L2){
     int i = 0, j = 0, k = 0;
     SeqList retList;

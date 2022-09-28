@@ -150,6 +150,15 @@
 		},
 		{
 			"path" : "HW2/CMakeLists.txt"
+		},
+		{
+			"path" : "LAB1/CMakeLists.txt"
+		},
+		{
+			"path" : "tree/CMakeLists.txt"
+		},
+		{
+			"path" : "kmp_search/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

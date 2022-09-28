@@ -6,3 +6,12 @@ E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/HW1/CMakeFiles/rebuild_c
 E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/HW2/CMakeFiles/hw2.dir
 E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/HW2/CMakeFiles/edit_cache.dir
 E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/HW2/CMakeFiles/rebuild_cache.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/LAB1/CMakeFiles/operation.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/LAB1/CMakeFiles/edit_cache.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/LAB1/CMakeFiles/rebuild_cache.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/tree/CMakeFiles/tree.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/tree/CMakeFiles/edit_cache.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/tree/CMakeFiles/rebuild_cache.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/kmp_search/CMakeFiles/kmp.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/kmp_search/CMakeFiles/edit_cache.dir
+E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/kmp_search/CMakeFiles/rebuild_cache.dir

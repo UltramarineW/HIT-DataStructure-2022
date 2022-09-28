@@ -47,6 +47,21 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/HW2/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/LAB1/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/tree/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/kmp_search/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

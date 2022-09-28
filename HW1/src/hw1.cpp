@@ -57,6 +57,8 @@ int main(int argc, char* argv[]){
     LinkListPrint(L3);
     cout << "The length of link list: " << LinkListLength(TestLinklist) << endl;
 
+    cout << 0xf && 0x66 ;
+
 
     return 0;
 }

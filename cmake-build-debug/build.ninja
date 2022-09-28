@@ -202,6 +202,189 @@ build HW2/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build HW2/rebuild_cache: phony HW2/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/HIT_Project/HIT-DataStructure-2022/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target operation
+
+
+#############################################
+# Order-only phony target for operation
+
+build cmake_object_order_depends_target_operation: phony || LAB1/CMakeFiles/operation.dir
+
+build LAB1/CMakeFiles/operation.dir/operation.cpp.obj: CXX_COMPILER__operation_Debug E$:/HIT_Project/HIT-DataStructure-2022/LAB1/operation.cpp || cmake_object_order_depends_target_operation
+  DEP_FILE = LAB1\CMakeFiles\operation.dir\operation.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = LAB1\CMakeFiles\operation.dir
+  OBJECT_FILE_DIR = LAB1\CMakeFiles\operation.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target operation
+
+
+#############################################
+# Link the executable LAB1\operation.exe
+
+build LAB1/operation.exe: CXX_EXECUTABLE_LINKER__operation_Debug LAB1/CMakeFiles/operation.dir/operation.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = LAB1\CMakeFiles\operation.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = LAB1\operation.exe
+  TARGET_IMPLIB = LAB1\liboperation.dll.a
+  TARGET_PDB = operation.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build LAB1/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug\LAB1 && E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build LAB1/edit_cache: phony LAB1/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build LAB1/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug\LAB1 && E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\HIT_Project\HIT-DataStructure-2022 -BE:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build LAB1/rebuild_cache: phony LAB1/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/HIT_Project/HIT-DataStructure-2022/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tree
+
+
+#############################################
+# Order-only phony target for tree
+
+build cmake_object_order_depends_target_tree: phony || tree/CMakeFiles/tree.dir
+
+build tree/CMakeFiles/tree.dir/tree_traverse.cpp.obj: CXX_COMPILER__tree_Debug E$:/HIT_Project/HIT-DataStructure-2022/tree/tree_traverse.cpp || cmake_object_order_depends_target_tree
+  DEP_FILE = tree\CMakeFiles\tree.dir\tree_traverse.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = tree\CMakeFiles\tree.dir
+  OBJECT_FILE_DIR = tree\CMakeFiles\tree.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tree
+
+
+#############################################
+# Link the executable tree\tree.exe
+
+build tree/tree.exe: CXX_EXECUTABLE_LINKER__tree_Debug tree/CMakeFiles/tree.dir/tree_traverse.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = tree\CMakeFiles\tree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = tree\tree.exe
+  TARGET_IMPLIB = tree\libtree.dll.a
+  TARGET_PDB = tree.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build tree/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug\tree && E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tree/edit_cache: phony tree/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tree/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug\tree && E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\HIT_Project\HIT-DataStructure-2022 -BE:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tree/rebuild_cache: phony tree/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/HIT_Project/HIT-DataStructure-2022/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target kmp
+
+
+#############################################
+# Order-only phony target for kmp
+
+build cmake_object_order_depends_target_kmp: phony || kmp_search/CMakeFiles/kmp.dir
+
+build kmp_search/CMakeFiles/kmp.dir/kmp.cpp.obj: CXX_COMPILER__kmp_Debug E$:/HIT_Project/HIT-DataStructure-2022/kmp_search/kmp.cpp || cmake_object_order_depends_target_kmp
+  DEP_FILE = kmp_search\CMakeFiles\kmp.dir\kmp.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = kmp_search\CMakeFiles\kmp.dir
+  OBJECT_FILE_DIR = kmp_search\CMakeFiles\kmp.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target kmp
+
+
+#############################################
+# Link the executable kmp_search\kmp.exe
+
+build kmp_search/kmp.exe: CXX_EXECUTABLE_LINKER__kmp_Debug kmp_search/CMakeFiles/kmp.dir/kmp.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = kmp_search\CMakeFiles\kmp.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = kmp_search\kmp.exe
+  TARGET_IMPLIB = kmp_search\libkmp.dll.a
+  TARGET_PDB = kmp.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build kmp_search/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug\kmp_search && E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build kmp_search/edit_cache: phony kmp_search/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build kmp_search/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug\kmp_search && E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\HIT_Project\HIT-DataStructure-2022 -BE:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build kmp_search/rebuild_cache: phony kmp_search/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build hw1: phony HW1/hw1.exe
@@ -212,6 +395,18 @@ build hw2: phony HW2/hw2.exe
 
 build hw2.exe: phony HW2/hw2.exe
 
+build kmp: phony kmp_search/kmp.exe
+
+build kmp.exe: phony kmp_search/kmp.exe
+
+build operation: phony LAB1/operation.exe
+
+build operation.exe: phony LAB1/operation.exe
+
+build tree: phony tree/tree.exe
+
+build tree.exe: phony tree/tree.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -220,7 +415,7 @@ build hw2.exe: phony HW2/hw2.exe
 #############################################
 # Folder: E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug
 
-build all: phony HW1/all HW2/all
+build all: phony HW1/all HW2/all LAB1/all tree/all kmp_search/all
 
 # =============================================================================
 
@@ -237,20 +432,41 @@ build HW1/all: phony HW1/hw1.exe
 build HW2/all: phony HW2/hw2.exe
 
 # =============================================================================
+
+#############################################
+# Folder: E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/LAB1
+
+build LAB1/all: phony LAB1/operation.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/kmp_search
+
+build kmp_search/all: phony kmp_search/kmp.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug/tree
+
+build tree/all: phony tree/tree.exe
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../HW1/CMakeLists.txt ../HW2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../HW1/CMakeLists.txt ../HW2/CMakeLists.txt ../LAB1/CMakeLists.txt ../kmp_search/CMakeLists.txt ../tree/CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../HW1/CMakeLists.txt ../HW2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../HW1/CMakeLists.txt ../HW2/CMakeLists.txt ../LAB1/CMakeLists.txt ../kmp_search/CMakeLists.txt ../tree/CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake E$:/software/apps/CLion/ch-0/222.3345.126/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

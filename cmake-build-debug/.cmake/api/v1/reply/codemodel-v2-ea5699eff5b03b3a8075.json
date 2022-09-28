@@ -9,7 +9,10 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3,
+						4,
+						5
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -48,6 +51,51 @@
 					[
 						1
 					]
+				},
+				{
+					"build" : "LAB1",
+					"jsonFile" : "directory-LAB1-Debug-bb15da665bb6949b9f47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "LAB1",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "tree",
+					"jsonFile" : "directory-tree-Debug-219be2e58cfa5f97dd5b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tree",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "kmp_search",
+					"jsonFile" : "directory-kmp_search-Debug-0b8f238bf7eac7e68fcb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "kmp_search",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "Debug",
@@ -58,13 +106,19 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3,
+						4,
+						5
 					],
 					"name" : "DATA_STRUCTURE",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3,
+						4
 					]
 				}
 			],
@@ -82,6 +136,27 @@
 					"id" : "hw2::@55324602d6d7b2a5aefb",
 					"jsonFile" : "target-hw2-Debug-a147c2f7166989ab00c8.json",
 					"name" : "hw2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "kmp::@d21db57742595916d644",
+					"jsonFile" : "target-kmp-Debug-83bd6131fa2e552aa8be.json",
+					"name" : "kmp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "operation::@95112ccba95c0e0173a2",
+					"jsonFile" : "target-operation-Debug-114e1dcb021989655e80.json",
+					"name" : "operation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "tree::@08328a494b2f609a5757",
+					"jsonFile" : "target-tree-Debug-feb90206a039d41b2e30.json",
+					"name" : "tree",
 					"projectIndex" : 0
 				}
 			]

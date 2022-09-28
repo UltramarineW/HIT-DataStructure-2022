@@ -5,11 +5,21 @@
 #include "LinkList.h"
 using namespace std;
 
+/**
+ * Init the list list
+ * @param L
+ */
 void LinkListInit(LinkList &L){
     L = new LNode;
     L -> data = 0;
     L -> next = nullptr;
 }
+
+/**
+ * Insert element to link list head
+ * @param L
+ * @param Elem
+ */
 
 void LinkListInsertHead(LinkList &L, ElemType Elem){
     auto s = new LNode;
@@ -18,6 +28,12 @@ void LinkListInsertHead(LinkList &L, ElemType Elem){
     L -> next = s;
 }
 
+
+/**
+ * Insert element to the linkl list tail
+ * @param L
+ * @param Elem
+ */
 void LinkListInsertTail(LinkList &L, ElemType Elem){
     // 建立工作指针
     LNode* pw = L;
@@ -30,6 +46,12 @@ void LinkListInsertTail(LinkList &L, ElemType Elem){
     pw -> next = s;
 }
 
+/**
+ * Delete specific element in the link list
+ * @param L
+ * @param Elem
+ * @return
+ */
 bool LinkListDeleteElem(LinkList &L, ElemType Elem){
     LNode* pw = L;
     while(pw -> next != nullptr) {
@@ -46,6 +68,11 @@ bool LinkListDeleteElem(LinkList &L, ElemType Elem){
     return true;
 }
 
+/**
+ * Delete repeated element in the link list
+ * @param L
+ * @return
+ */
 bool LinkListDeleteRepeat(LinkList &L){
     LNode* pw = L;
     if (pw -> next != nullptr) {
@@ -68,6 +95,11 @@ bool LinkListDeleteRepeat(LinkList &L){
     return true;
 }
 
+/**
+ * Reverse the linklist
+ * @param L
+ * @return
+ */
 bool LinkListReverse(LinkList &L) {
     LNode *pw = L;
     if (pw -> next == nullptr) {
@@ -85,6 +117,12 @@ bool LinkListReverse(LinkList &L) {
     return true;
 }
 
+/**
+ * Rotate the link list k length to the right
+ * @param L
+ * @param k
+ * @return
+ */
 bool LinkListRotateRight(LinkList &L, int k) {
     int count = 0;
     int length = LinkListLength(L);
@@ -105,6 +143,12 @@ bool LinkListRotateRight(LinkList &L, int k) {
     return true;
 }
 
+/**
+ * Rotate the link list k length to the left
+ * @param L
+ * @param k
+ * @return
+ */
 bool LinkListRotateLeft(LinkList &L, int k) {
     int length = LinkListLength(L);
     k = k % length;
@@ -120,6 +164,11 @@ bool LinkListRotateLeft(LinkList &L, int k) {
     p3 -> next = p2;
 }
 
+/**
+ * Compute the length of link list
+ * @param L
+ * @return
+ */
 int LinkListLength(LinkList &L) {
     int count = 0;
     LNode *pw = L;
@@ -131,6 +180,12 @@ int LinkListLength(LinkList &L) {
     return count;
 }
 
+/**
+ * Merge two sorted link lists
+ * @param L1
+ * @param L2
+ * @return
+ */
 LinkList LinkListMerge(LinkList &L1, LinkList &L2) {
     auto L3 = new LNode;
     L3 -> next = nullptr;
@@ -169,6 +224,10 @@ LinkList LinkListMerge(LinkList &L1, LinkList &L2) {
     return L3;
 }
 
+/**
+ * Show all element in the link list
+ * @param L
+ */
 void LinkListPrint(LinkList &L) {
     LNode* pw = L;
     while (pw -> next != nullptr) {
