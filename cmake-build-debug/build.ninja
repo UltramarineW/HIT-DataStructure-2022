@@ -91,6 +91,13 @@ build HW1/CMakeFiles/hw1.dir/src/SeqList.cpp.obj: CXX_COMPILER__hw1_Debug E$:/HI
   OBJECT_DIR = HW1\CMakeFiles\hw1.dir
   OBJECT_FILE_DIR = HW1\CMakeFiles\hw1.dir\src
 
+build HW1/CMakeFiles/hw1.dir/src/StaticLinkList.cpp.obj: CXX_COMPILER__hw1_Debug E$:/HIT_Project/HIT-DataStructure-2022/HW1/src/StaticLinkList.cpp || cmake_object_order_depends_target_hw1
+  DEP_FILE = HW1\CMakeFiles\hw1.dir\src\StaticLinkList.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IE:/HIT_Project/HIT-DataStructure-2022/HW1/./include
+  OBJECT_DIR = HW1\CMakeFiles\hw1.dir
+  OBJECT_FILE_DIR = HW1\CMakeFiles\hw1.dir\src
+
 build HW1/CMakeFiles/hw1.dir/src/hw1.cpp.obj: CXX_COMPILER__hw1_Debug E$:/HIT_Project/HIT-DataStructure-2022/HW1/src/hw1.cpp || cmake_object_order_depends_target_hw1
   DEP_FILE = HW1\CMakeFiles\hw1.dir\src\hw1.cpp.obj.d
   FLAGS = -g
@@ -106,7 +113,7 @@ build HW1/CMakeFiles/hw1.dir/src/hw1.cpp.obj: CXX_COMPILER__hw1_Debug E$:/HIT_Pr
 #############################################
 # Link the executable HW1\hw1.exe
 
-build HW1/hw1.exe: CXX_EXECUTABLE_LINKER__hw1_Debug HW1/CMakeFiles/hw1.dir/src/LinkList.cpp.obj HW1/CMakeFiles/hw1.dir/src/SeqList.cpp.obj HW1/CMakeFiles/hw1.dir/src/hw1.cpp.obj
+build HW1/hw1.exe: CXX_EXECUTABLE_LINKER__hw1_Debug HW1/CMakeFiles/hw1.dir/src/LinkList.cpp.obj HW1/CMakeFiles/hw1.dir/src/SeqList.cpp.obj HW1/CMakeFiles/hw1.dir/src/StaticLinkList.cpp.obj HW1/CMakeFiles/hw1.dir/src/hw1.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = HW1\CMakeFiles\hw1.dir
