@@ -1,5 +1,0 @@
-E:\software\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/software/apps/CLion/ch-0/222.3345.126/bin/ninja/win/ninja.exe -G Ninja -S E:\HIT_Project\HIT-DataStructure-2022 -B E:\HIT_Project\HIT-DataStructure-2022\cmake-build-debug
--- HW1 src list: ./src/LinkList.cpp./src/SeqList.cpp./src/StaticLinkList.cpp./src/hw1.cpp
--- Configuring done
--- Generating done
--- Build files have been written to: E:/HIT_Project/HIT-DataStructure-2022/cmake-build-debug

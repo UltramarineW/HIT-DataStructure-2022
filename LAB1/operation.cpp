@@ -196,19 +196,46 @@ vector<char> ChangeExpression(char input[], int count) {
 
 }
 
+int ReadLine(char input[]) {
+    // 在clion中 可执行文件的位置在cmake-build-debug/LAB1中，所以地址采用../../LAB1/expression.txt
+    FILE *pf = fopen("../../LAB1/expression.txt", "r");
+    if (pf == nullptr) {
+        exit(-1);
+    }
+    int count = 0;
+    char ch;
+
+    while(1) {
+        fscanf(pf, "%c", &ch);
+        if(ch == '#') {
+            break;
+        }
+    }
+    while (1){
+        fscanf(pf, "%c", &ch);
+        if(ch == '#') {
+            break;
+        }
+        input[count++] = ch;
+    }
+    return count;
+}
+
 int main() {
-    char input[100] = "(7+15)*(23-28/4)+3^2+4.32*2";
-    char temp;
+//    char input[100] = "(7+15)*(23-28/4)+3^2+4.32*2";
+    char input [100];
     int count = 0;
 
-    // 自动输入的时候添加
-    int x = 0;
-    while(input[x] != '\0') {
-        count ++;
-        x++;
-    }
+    count = ReadLine(input);
 
-    //手动输入的时候取消注释
+//    // 自动输入的时候添加
+//    int x = 0;
+//    while(input[x] != '\0') {
+//        count ++;
+//        x++;
+//    }
+
+//手动输入的时候取消注释
 //    while(1) {
 //        temp = cin.get();
 //        if(temp == '#') break;
