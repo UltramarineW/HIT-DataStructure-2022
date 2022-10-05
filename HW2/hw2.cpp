@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <iostream>
 #include <queue>
+#include <cstring>
 
 using namespace std;
 
@@ -165,6 +166,83 @@ void SequenceQueneTraverse(BiTree tree) {
     }
 }
 
+bool JudgeBinaryTree(BiTree tree) {
+    queue<BiTNode*> q;
+    BiTNode *root = tree;
+    q.push(root);
+    while (!q.empty()) {
+        if(q.front() == nullptr) {
+            break;
+        }
+        q.push(q.front() -> lchild);
+        q.push(q.front() -> rchild);
+        q.pop();
+    }
+    while (!q.empty()) {
+        if(q.front() == nullptr) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void TreeWidthCallback(BiTree tree, int* count, int height, int TreeHeight) {
+    if(tree == nullptr || height == 0) {
+        return;
+    }
+    count[TreeHeight - height + 1]++;
+    TreeWidthCallback(tree -> lchild, count, height - 1, TreeHeight);
+    TreeWidthCallback(tree -> rchild, count, height - 1, TreeHeight);
+}
+
+int TreeWidthRecursive(BiTree tree) {
+    int height = TreeHeight(tree);
+    BiTNode *root = tree;
+    int count[100];
+    memset(count, 0, sizeof(int) * 100);
+    TreeWidthCallback(root, count, height, height);
+    int max = 0;
+    for(int i = 1; i <= height; i++) {
+        if (count[i] > max) {
+            max = count[i];
+        }
+    }
+    return max;
+}
+
+int TreeWidthNoneRecursive(BiTree tree) {
+    queue<BiTNode*> q;
+    q.push(tree);
+    int count[100];
+    memset(count, 0, sizeof(int) *100);
+    count[1] = 1;
+    int height = 1;
+    int temp = 0;
+    while (!q.empty()) {
+        if (temp == count[height]) {
+            temp = 0;
+            height++;
+        }
+        if(q.front() -> lchild != nullptr) {
+            q.push(q.front() -> lchild);
+            count[height + 1]++;
+        }
+        if(q.front() -> rchild != nullptr) {
+            q.push(q.front() -> rchild);
+            count[height + 1]++;
+        }
+        temp++;
+        q.pop();
+    }
+    int max = 0;
+    for(int i = 1; i <= height ; i++) {
+        if (count[i] > max) {
+            max = count[i];
+        }
+    }
+    return max;
+}
+
 int main(int argc, char *argv[]) {
     BiTree tree;
 //    createBiTree(tree);
@@ -208,8 +286,27 @@ int main(int argc, char *argv[]) {
     SequenceQueneTraverse(tree);
     cout <<endl;
 
-    cout << "Tree height " << TreeHeight(tree);
-    // 线性索引二叉树
+    cout << "Tree height " << TreeHeight(tree) << endl;
+
+    cout << "判断树: ";
+    bool judge = JudgeBinaryTree(tree);
+    if(judge) {
+        cout << "是完全二叉树";
+    } else {
+        cout << "不是完全二叉树";
+    }
+    cout <<endl;
+
+
+    cout << "递归计算树的宽度 " << endl;
+    int max = TreeWidthRecursive(tree);
+    cout << "树的宽度为 " << max;
+    cout << endl;
+
+    cout << "非递归计算树的宽度 " <<endl;
+    int max_2 = TreeWidthNoneRecursive(tree);
+    cout << "树的宽度为 " << max_2;
+    cout << endl;
 
     return 0;
 }
