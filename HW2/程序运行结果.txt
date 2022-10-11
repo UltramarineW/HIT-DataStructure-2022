@@ -1,0 +1,16 @@
+通过先序序列构造一棵树
+树为 ABDH#K###E##CFI###G#J##
+递归先序遍历   A B D H K E C F I G J
+递归中序遍历   H K D B E A I F C G J
+递归后续遍历   K H D E B I F J G C A
+递归层序遍历   A B C D E F G H I J K
+非递归前序遍历 A B D H K E C F I G J
+非递归中序遍历 H K D B E A I F C G J
+非递归后续遍历 K H D E B I F J G C A
+非递归层序遍历 A B C D E F G H I J K
+Tree height 5
+判断树: 不是完全二叉树
+递归计算树的宽度
+树的宽度为 4
+非递归计算树的宽度
+树的宽度为 4

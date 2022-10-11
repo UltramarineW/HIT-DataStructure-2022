@@ -26,6 +26,7 @@ int priority(char ch) {
     else if (ch == '^') {
         return 3;
     }
+    return 0;
 }
 
 bool compare(char op1, char op2) {
@@ -68,6 +69,7 @@ float GetResult(vector<char> expression){
         if (*it == ' '){
             continue;
         }
+        // 字符为数字
         if (isdigit(*it)) {
             while (isdigit(*it)) {
                 num *= 10;
@@ -87,6 +89,8 @@ float GetResult(vector<char> expression){
             value.push(num);
             continue;
         }
+
+        // 字符为操作符
         if (*it == '+') {
             num = value.top();
             value.pop();
@@ -137,6 +141,7 @@ vector<char> ChangeExpression(char input[], int count) {
     vector<char> expression;
 
     for (int i = 0; i < count; i++) {
+        // 字符为数字
         if (isdigit(input[i])) {
             while (isdigit(input[i])) {
                 expression.push_back(input[i]);
@@ -167,11 +172,13 @@ vector<char> ChangeExpression(char input[], int count) {
             PrintProcess(op, expression, i);
             continue;
         }
+        // 栈为空或者字符的优先级大于栈顶的优先级
         if ((op.empty()) || (!op.empty() && compare(input[i], op.top()))) {
             op.push(input[i]);
             PrintProcess(op, expression, i);
             continue;
         }
+        // 字符的优先级小于栈顶的优先级
         while (!op.empty() && !compare(input[i], op.top())) {
             if(op.top() != '(') {
                 expression.push_back(op.top());
@@ -205,13 +212,13 @@ int ReadLine(char input[]) {
     int count = 0;
     char ch;
 
-    while(1) {
+    while(true) {
         fscanf(pf, "%c", &ch);
         if(ch == '#') {
             break;
         }
     }
-    while (1){
+    while (true){
         fscanf(pf, "%c", &ch);
         if(ch == '#') {
             break;
@@ -222,14 +229,15 @@ int ReadLine(char input[]) {
 }
 
 int main() {
-//    char input[100] = "(7+15)*(23-28/4)+3^2+4.32*2";
+    // 从文件输入
     char input [100];
-    int count = 0;
-
-    count = ReadLine(input);
+    int count = ReadLine(input);
 
 //    // 自动输入的时候添加
+//    char input[100] = "(7+15)*(23-28/4)+3^2+4.32*2";
+//    char input[100] = "12+(3*(5/6)-7)";
 //    int x = 0;
+//    int count = 0;
 //    while(input[x] != '\0') {
 //        count ++;
 //        x++;
@@ -249,14 +257,14 @@ int main() {
 //    }
 //    cout <<count <<endl;
 
-
+    // 中缀表达式转后缀表达式
     vector<char> expression = ChangeExpression(input, count);
 
     cout << endl;
     cout << "得到的后缀表达式为 " ;
     PrintExpression(expression);
 
-
+    //计算后缀表达式值
     float result = GetResult(expression);
     cout <<endl;
     cout << "计算得到的结果为 " << result;

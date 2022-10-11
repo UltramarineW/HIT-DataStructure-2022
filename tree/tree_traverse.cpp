@@ -136,6 +136,17 @@ int TreeHeight(BiTree tree) {
     return (m > n) ? (m + 1) : (n + 1);
 }
 
+void SwapChildTree(BiTree tree) {
+    if(tree == nullptr) {
+        return;
+    }
+    BiTNode *temp = tree -> lchild;
+    tree -> lchild = tree -> rchild;
+    tree -> rchild = temp;
+    SwapChildTree(tree -> lchild);
+    SwapChildTree(tree -> rchild);
+}
+
 int main(int argc, char *argv[]) {
     BiTree tree;
 //    createBiTree(tree);
@@ -167,6 +178,12 @@ int main(int argc, char *argv[]) {
 
     cout << "Tree height " << TreeHeight(tree);
     // 线性索引二叉树
+    cout << endl;
+
+    cout << "交换二叉树的所有左右节点" << endl;
+    SwapChildTree(tree);
+    PreorderTraverse(tree);
+    cout << endl;
 
     return 0;
 }
