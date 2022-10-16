@@ -237,6 +237,7 @@ int main() {
 
     // 获取每个字符的频率
     map<char, int> char_freq;
+    cout << endl;
     cout << "字符的使用频率为" << endl;
     GetFreq(file, char_freq);
 
@@ -277,15 +278,18 @@ int main() {
     SaveCode(decode, codeFileName);
 
     // 判断原始文件与经过加解密后的字符串是否相等
+    cout << endl;
     if(decode == file) {
         cout << "The two string is equal" <<endl;
     } else {
         cout << "The two string is not equal" <<endl;
     }
+    cout << endl;
 
     string binaryCode = BinaryEncode(file, char_freq);
     codeFileName = "../../LAB2/binaryFile.txt";
     SaveCode(binaryCode, codeFileName);
 
+    cout << endl;
     cout << "压缩率为" << (double)huffmanEncoded.size() / (double)binaryCode.size() << endl;
 }
