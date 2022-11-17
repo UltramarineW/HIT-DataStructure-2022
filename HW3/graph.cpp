@@ -40,6 +40,12 @@ typedef struct{
     enum GraphKind kind;
 }ALGraph;
 
+typedef struct TreeNode{
+    char data;
+    struct TreeNode *lchild;
+    struct TreeNode *nextsbling;
+}TreeNode, *CSTree;
+
 using namespace std;
 
 void InitialMGraph(MGraph &graph) {
@@ -105,42 +111,43 @@ void CreateALGraph(ALGraph &graph, string file_name, enum GraphKind kind) {
     ifs >> graph.vexnum;
 
     // 输入节点信息
-    for(int i = 0; i < graph.vexnum; i++){
+    for (int i = 0; i < graph.vexnum; i++) {
         char a;
         ifs >> a;
         graph.vertices[i].data = a;
     }
 
     graph.kind = kind;
-    while(!ifs.eof()){
+    while (!ifs.eof()) {
         int nodeIdx1, nodeIdx2;
-        ifs >> nodeIdx1 >>nodeIdx2;
+        ifs >> nodeIdx1 >> nodeIdx2;
         nodeIdx1 -= 1, nodeIdx2 -= 1;
 
         // 利用头插法往链表中插入元素
         // 有向图
-        if(graph.kind == DG) {
-            ArcNode *pointer = new ArcNode;
-            pointer -> next = graph.vertices[nodeIdx1].first;
-            pointer -> adjvex = nodeIdx2;
+        if (graph.kind == DG) {
+            auto *pointer = new ArcNode;
+            pointer->next = graph.vertices[nodeIdx1].first;
+            pointer->adjvex = nodeIdx2;
             graph.vertices[nodeIdx1].first = pointer;
         }
-        // 无向图
-        else if(graph.kind == UDG) {
-            ArcNode *pointer = new ArcNode;
-            pointer -> next = graph.vertices[nodeIdx1].first;
-            pointer -> adjvex = nodeIdx2;
+            // 无向图
+        else if (graph.kind == UDG) {
+            auto *pointer = new ArcNode;
+            pointer->next = graph.vertices[nodeIdx1].first;
+            pointer->adjvex = nodeIdx2;
             graph.vertices[nodeIdx1].first = pointer;
 
             pointer = new ArcNode;
-            pointer -> next = graph.vertices[nodeIdx2].first;
-            pointer -> adjvex = nodeIdx1;
+            pointer->next = graph.vertices[nodeIdx2].first;
+            pointer->adjvex = nodeIdx1;
             graph.vertices[nodeIdx2].first = pointer;
             graph.arcnum++;
         }
     }
     ifs.close();
 }
+
 
 void ShowALGraph(ALGraph graph) {
     for(int i = 0; i < graph.vexnum;i++) {
@@ -197,12 +204,25 @@ MGraph TransferFromALtoM(ALGraph graph){
 
 bool visited[MAX_VERTEX_NUM] ;
 // 深度优先搜索递归方式 邻接表
-void DFS(ALGraph graph, int i) {
+void DFS(ALGraph graph, int i, TreeNode *tree) {
     cout << graph.vertices[i].data << " ";
     visited[i] = true;
+    bool first = true;
+    TreeNode *node_pointer = nullptr;
     for(ArcNode *pointer = graph.vertices[i].first; pointer != nullptr; pointer = pointer -> next) {
         if(!visited[pointer -> adjvex]) {
-            DFS(graph, pointer -> adjvex);
+            TreeNode *child_node = new TreeNode;
+            child_node -> data = graph.vertices[pointer -> adjvex].data;
+            child_node -> lchild = nullptr, child_node -> nextsbling = nullptr;
+            if(first) {
+                tree -> lchild = child_node;
+                first = false;
+            }
+            else {
+                node_pointer -> nextsbling = child_node;
+            }
+            node_pointer = child_node;
+            DFS(graph, pointer -> adjvex, child_node);
         }
     }
 }
@@ -218,13 +238,25 @@ void DFS(MGraph graph, int i) {
 }
 
 // 深度优先搜索递归方式 邻接表
-void DFSTraverse(ALGraph graph) {
+void DFSTraverse(ALGraph graph, CSTree &Tree) {
+    Tree = nullptr;
     for(int i = 0; i < graph.vexnum; i++) {
         visited[i] = false;
     }
+    TreeNode *pointer = nullptr;
     for(int i = 0; i < graph.vexnum;i++){
         if(!visited[i]) {
-            DFS(graph, i);
+            TreeNode *node = new TreeNode;
+            node -> data = graph.vertices[i].data;
+            node -> lchild = nullptr, node -> nextsbling = nullptr;
+            if(Tree == nullptr) {
+                Tree = node;
+            }
+            else {
+                pointer -> nextsbling = node;
+            }
+            pointer = node;
+            DFS(graph, i, node);
         }
     }
 }
@@ -406,6 +438,15 @@ void DFSTraverseWORecurse(MGraph graph) {
 }
 
 
+void TreeTraverse(CSTree Tree){
+    if(Tree == nullptr) {
+        return ;
+    }
+    cout << Tree -> data << " ";
+    TreeTraverse(Tree -> lchild);
+    TreeTraverse(Tree -> nextsbling);
+}
+
 int main() {
     MGraph MGraph_UDG, MGraph_DG;
     InitialMGraph(MGraph_UDG);
@@ -413,8 +454,8 @@ int main() {
     ALGraph ALGraph_UDG, ALGraph_DG;
     InitialALGraph(ALGraph_UDG);
     InitialALGraph(ALGraph_DG);
-    cout << "用邻接矩阵存储的图的大小为: " << sizeof(MGraph) << endl;
-    cout << "用邻接表存储的图的大小为: " << sizeof (ALGraph) <<endl;
+    cout << "用邻接矩阵存储的图的大小为: " << sizeof(MGraph) << " " << "时间复杂度为O(n^2)" << endl;
+    cout << "用邻接表存储的图的大小为: " << sizeof(ALGraph) << " " << "时间复杂度为O(n^2)" << endl;
     cout << endl;
 
     string file_name = "../../HW3/graph.txt";
@@ -440,19 +481,21 @@ int main() {
     ShowMGraph(transferedGraph2);
     cout << endl;
 
-    cout << "用递归的方法进行无向图深度优先搜索（用邻接表存储）" << endl;
-    DFSTraverse(ALGraph_UDG);
+    cout << "用递归的方法进行无向图深度优先搜索（用邻接表存储）同时构建树" << endl;
+    CSTree ALG_UDG_Tree;
+    DFSTraverse(ALGraph_UDG, ALG_UDG_Tree);
     cout << endl;
+
 
     cout << "用递归的方法进行无向图深度优先搜索（用邻接矩阵存储）" << endl;
     DFSTraverse(MGraph_UDG);
     cout << endl;
 
-    cout << "用非递归的方法进行深度优先搜索（用邻接表存储）" <<endl;
+    cout << "用非递归的方法进行深度优先搜索（用邻接表存储）" << endl;
     DFSTraverseWORecurse(ALGraph_UDG);
     cout << endl;
 
-    cout << "用非递归的方法进行深度优先搜索（用邻接矩阵存储）" <<endl;
+    cout << "用非递归的方法进行深度优先搜索（用邻接矩阵存储）" << endl;
     DFSTraverseWORecurse(MGraph_UDG);
     cout << endl;
 
@@ -462,12 +505,16 @@ int main() {
 
     cout << "用非递归的方法进行广度优先搜索（用邻接矩阵存储）" << endl;
     BFSTraverse(MGraph_UDG);
-    cout <<endl;
-    cout <<endl;
+    cout << endl;
 
+    cout << endl;
+    cout << "深度优先搜索生成树遍历" << endl;
+    TreeTraverse(ALG_UDG_Tree);
+    cout << endl;
+
+    cout << endl;
     CountVexDegree(ALGraph_DG);
     CountVexDegree(ALGraph_UDG);
-
 
 
     return 0;
