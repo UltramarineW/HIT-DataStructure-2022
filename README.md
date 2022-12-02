@@ -1,7 +1,7 @@
 # HIT-DataStructure-2022
-Homework and Lab for Harbin Institute of Technology data structure and algorithm
-Please do not copy the code directly.
-I am very glad to accept issues if there is a problem with the code.
+> Homework and Lab for Harbin Institute of Technology data structure and algorithm.<br>
+> Please do not copy the code directly. <br>
+> I am very glad to accept issues if there is a problem with the code.<br>
 ---
 
 - **HW1 线性结构的存储结构与应用**
